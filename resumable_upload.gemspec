@@ -26,4 +26,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "sqlite3", "~> 1.3.13"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "minitest"
+  s.add_development_dependency "standard"
 end
