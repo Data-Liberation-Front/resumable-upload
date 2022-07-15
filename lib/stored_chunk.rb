@@ -1,7 +1,6 @@
-require 'fog_storage'
+require "fog_storage"
 
 class StoredChunk
-
   def self.save(filename, file, chunk_number)
     fog.create_file full_path(filename, chunk_number), file
   end
@@ -23,14 +22,14 @@ class StoredChunk
   end
 
   def self.total(filename)
-    fog.bucket.files.select { |f| f.key.match /#{filename}_chunks\// }.count
+    fog.bucket.files.select { |f| f.key.match(/#{filename}_chunks\//) }.count
   end
 
   def self.join(filename, chunk_size)
     # Create a target file
     target_file = Tempfile.new(filename)
     target_file.binmode
-    for i in 1..chunk_size.to_i
+    (1..chunk_size.to_i).each do |i|
       # Select the chunk
       chunk = StoredChunk.find(filename, i)
 
@@ -51,5 +50,4 @@ class StoredChunk
     @@fog ||= FogStorage.new
     @@fog
   end
-
 end

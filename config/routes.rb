@@ -1,5 +1,3 @@
 ResumableUpload::Engine.routes.draw do
-
-  resource :chunk, :only => [:create, :show]
-
+  resource :chunk, only: [:create, :show]
 end

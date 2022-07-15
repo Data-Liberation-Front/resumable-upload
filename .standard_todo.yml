@@ -1,0 +1,7 @@
+# Auto generated files with errors to ignore.
+# Remove from this list as you refactor files.
+---
+ignore:
+- app/controllers/resumable_upload/chunks_controller.rb
+- lib/stored_chunk.rb
+- spec/controllers/chunks_controller_spec.rb
