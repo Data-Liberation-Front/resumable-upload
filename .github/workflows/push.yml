@@ -12,7 +12,7 @@ jobs:
             rails-version: 6
       fail-fast: false
     env:
-      BUNDLER_GEMFILE: "Gemfile.rails${{ matrix.rails-version }}"
+      BUNDLER_GEMFILE: ${{ github.workspace }}/Gemfile.rails${{ matrix.rails-version }}
     steps:
       - uses: actions/checkout@v2
       - name: Install cURL Headers
