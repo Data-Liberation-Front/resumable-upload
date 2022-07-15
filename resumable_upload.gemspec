@@ -22,6 +22,8 @@ Gem::Specification.new do |s|
   s.add_dependency "fog", "~> 1.36"
   s.add_dependency "dotenv"
 
-  s.add_development_dependency "pry"
+  s.add_development_dependency "byebug"
   s.add_development_dependency "sqlite3", "~> 1.3.13"
+  s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "minitest"
 end
