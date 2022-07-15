@@ -4,3 +4,4 @@
 ignore:
 - app/controllers/resumable_upload/chunks_controller.rb
 - lib/stored_chunk.rb
+- spec/controllers/chunks_controller_spec.rb
